@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me - Personal Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header img.avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 70%;
+      object-fit: cover;
+      border: 4px solid #a8d8ea;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: #4a4a4a;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      margin-top: 8px;
+      color: #7a7a7a;
+    }
+
+    main {
+      max-width: 700px;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      width: 100%;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    section h2 {
+      font-weight: 600;
+      border-bottom: 2px solid #a8d8ea;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+      font-size: 1.8rem;
+      color: #4a4a4a;
+    }
+
+    .skills-list, .hobbies-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      flex-wrap: nowrap;
+    }
+
+    .skills-list li,
+    .hobbies-list li {
+      background: #a8d8ea;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(168,216,234,0.5);
+      font-size: 0.95rem;
+      color: #222;
+      display: flex;
+      gap: 0px;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: transform 0.2s ease;
+    }
+
+    .skills-list li:hover,
+    .hobbies-list li:hover {
+      transform: translateY(-3px);
+    }
+
+    .skills-list i {
+      font-size: 1.8rem;
+      margin-top: 3px;
+      color: #333;
+    }
+
+    .skills-list .text,
+    .hobbies-list .text {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .skills-list .text strong,
+    .hobbies-list .text strong {
+      font-size: 1.1rem;
+      color: #222;
+    }
+
+    .hobbies-list .icon img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .contact-links a {
+      display: inline-block;
+      background: #a8d8ea;
+      color: #222;
+      padding: 10px 10px;
+      margin: 5px 10px 5px 0;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 3px 8px rgba(168,216,234,0.5);
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-links a:hover {
+      background-color: #90c8d8;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 30px;
+    }
+
+    .portfolio-item {
+      background: #a8d8ea;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(168,216,234,0.6);
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(168,216,234,0.9);
+    }
+
+    .portfolio-item h3 {
+      margin: 0 0 10px;
+      font-size: 1.2rem;
+    }
+
+    .portfolio-item p {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.3;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #999;
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      main {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="avatar" src="fotovita.jpg" alt="Foto Saya" />
+    <h1>Apriliza Nurvita Putri Rahayu</h1>
+    <p>Selamat Datang di Website Pribadi Saya</p>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Halo, saya Apriliza Nurvita Putri Rahayu, mahasiswa Teknik Informatika semester 4 di Universitas Wahid Hasyim Semarang. Saya tertarik pada bidang desain dan pengembangan web, serta aktif mengembangkan kemampuan melalui berbagai proyek. Selain akademik, saya juga memiliki hobi traveling dan fotografi yang membantu saya menjaga kreativitas. Terima kasih sudah mengunjungi website saya.</p>
+    </section>
+
+    <section id="hobbies">
+      <h2>Hobbies</h2>
+      <ul class="hobbies-list">
+         <li>
+          <div class="icon">
+            <img src="kembang.jpg" alt="Hiking"/>
+          </div>
+          <div class="text">
+            <strong>Hiking</strong>
+            <p>Hiking adalah salah satu cara favorit saya untuk menikmati alam dan merasakan ketenangan di tengah alam.</p>
+          </div>
+        </li>
+        <li>
+          <div class="icon">
+            <img src="traveling.jpg" alt="Traveling"/>
+          </div>
+          <div class="text">
+            <strong>Traveling</strong>
+            <p>Saya sangat menyukai traveling karena dapat menjelajahi berbagai tempat baru dan merasakan budaya yang berbeda.</p>
+          </div>
+        </li>
+        <li>
+          <div class="icon">
+            <img src="hiking.jpg" alt="Photography"/>
+          </div>
+          <div class="text">
+            <strong>Photography</strong>
+            <p>Fotografi adalah hobi yang melengkapi perjalanan saya dan membantu saya berbagi cerita melalui gambar.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>
+          <i class="fab fa-figma"></i>
+          <div class="text">
+            <strong>Figma</strong>
+            <p>Merancang UI/UX dan prototipe interaktif dengan tampilan profesional dan responsif.</p>
+          </div>
+        </li>
+        <li>
+          <i class="fab fa-wordpress"></i>
+          <div class="text">
+            <strong>WordPress</strong>
+            <p>Membuat dan mengelola website dengan mudah menggunakan tema dan plugin sesuai kebutuhan.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="portofolio">
+      <h2>Portofolio</h2>
+      <div class="portfolio-grid">
+        <a href="https://www.figma.com/proto/6tW4MfEKgtDbpDnULG0j2S/apriliza-nurvita" class="portfolio-item" target="_blank" rel="noopener noreferrer">
+          <h3>Desain Sistem Toko Online</h3>
+          <p>Mendesain UI untuk toko online Kincah Snack menggunakan Figma.</p>
+        </a>
+        <a href="https://kucingbiru609.wixsite.com/babykama" class="portfolio-item" target="_blank" rel="noopener noreferrer">
+          <h3>Website Toko Online</h3>
+          <p>Website e-commerce sederhana BabyKama.id menggunakan Wix dan integrasi WhatsApp.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact & Social Media</h2>
+      <div class="contact-links">
+        <a href="mailto:aprilizanurvitapr@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/" target="_blank">GitHub</a>
+        <a href="https://www.tiktok.com/@prlzzz1" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+        <a href="https://instagram.com/prlzzz" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://twitter.com/iniipitaaa" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    Create with love
+  </footer>
+</body>
+</html>
